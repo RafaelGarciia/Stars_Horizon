@@ -1,0 +1,1 @@
+instance_ship.shild_on = false;
