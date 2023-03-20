@@ -1,0 +1,1 @@
+layer_sequence_create("Menu", 0, display_get_gui_height()/2, sq_main_menu);

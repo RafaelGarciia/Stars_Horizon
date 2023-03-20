@@ -1,4 +1,1 @@
-open = false;
-collision = false;
-_frame = false;
-move_left = false;
+mask_index = spr_collision;

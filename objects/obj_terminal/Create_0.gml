@@ -31,7 +31,7 @@ function spawn_ship (_model_ship){
 		var _inst = instance_find(obj_dock_bay, i);
 		if distance_to_object(_inst) <= 2000{
 			if _inst.ship_in_bay == false {
-				instance_create_layer(_inst.x, _inst.y, "Ships", obj_ship, {ship_model : _model_ship});
+				instance_create_layer(_inst.x, _inst.y, "Objects", obj_ship, {ship_model : _model_ship});
 				spaw_bay = _inst.bay_id;
 				return true;
 			}

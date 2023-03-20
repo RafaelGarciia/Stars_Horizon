@@ -6,29 +6,33 @@ if state_free{
 	var _spd_hor = key_right - key_left,
 		_spd_ver = key_down  - key_up;
 }
-	
-if stoped{
-	if key_utility{		
-		if distance_to_object(obj_terminal) <= dist_interc{
-			key_utility = false;
-			var _inst = instance_nearest(x, y, obj_terminal);
-			obj_control.in_control = _inst;
-			_inst.player_use = id;
-		}else if distance_to_object(obj_simple_door) <= dist_interc{
-			key_utility = false;
-			var _inst = instance_nearest(x, y, obj_simple_door);
-			_inst.open = true;
-			
-		}
-		
-		//if distance_to_object(obj_terminal) <= dist_interc{
-		//	key_utility = false;
-		//	var _inst = instance_nearest(x, y, obj_terminal);
-		//	obj_control.in_control = _inst;
-		//	_inst.player_in = self;	
-		//}
+
+if key_utility{		
+	if distance_to_object(obj_terminal) <= dist_interc{
+		key_utility = false;
+		var _inst = instance_nearest(x, y, obj_terminal);
+		obj_control.in_control = _inst;
+		_inst.player_use = id;
+	}else if distance_to_object(obj_simple_door) <= dist_interc{
+		key_utility = false;
+		var _inst = instance_nearest(x, y, obj_simple_door);
+		_inst.open = !_inst.open;
+	}else if distance_to_object(obj_elevator_frame) <= dist_interc{
+		key_utility = false;
+		var _inst = instance_nearest(x, y, obj_elevator_frame);
+		_inst.open = !_inst.open;
 	}
-	
+		
+	//if distance_to_object(obj_terminal) <= dist_interc{
+	//	key_utility = false;
+	//	var _inst = instance_nearest(x, y, obj_terminal);
+	//	obj_control.in_control = _inst;
+	//	_inst.player_in = self;	
+	//}
+}
+
+
+if stoped{	
 	if key_entry{
 		if distance_to_object(obj_ship) <= dist_interc and !in_veiculo{
 			key_entry = false;
@@ -47,7 +51,6 @@ if stoped{
 			collision	= true;
 		}
 	}
-	
 }else{
 	if key_run {_spd = spd_run} else {_spd = spd_walk};
 }

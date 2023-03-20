@@ -35,5 +35,5 @@
     "path": "sprites/spr_player_walk_down/spr_player_walk_down.yy",
   },
   "spriteMaskId": null,
-  "visible": true,
+  "visible": false,
 }

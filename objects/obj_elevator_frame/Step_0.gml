@@ -1,16 +1,18 @@
 if door_left == false{
-	door_left  = instance_create_layer(x-32, y, "obj_sub", obj_collision);
-	door_left.sprite_index = spr_elevator_door;
+	door_left  = instance_create_layer(x-32, y, "Objects", obj_elevator_door);
+	//door_left.sprite_index = spr_elevator_door;
 	door_left.image_index = 0;
-	door_left.mask_index = spr_collision;
-	door_left.depth = 410;
+	//door_left.mask_index = spr_collision;
+	//door_left.depth = 410;
+	//door_left.visible = true;
 }
 if door_right == false{
-	door_right = instance_create_layer(x, y, "obj_sub", obj_collision);
-	door_right.sprite_index = spr_elevator_door;
+	door_right = instance_create_layer(x, y, "Objects", obj_elevator_door);
+	//door_right.sprite_index = spr_elevator_door;
 	door_right.image_index = 1;
-	door_right.mask_index = spr_collision;
-	door_right.depth = 410;
+	//door_right.mask_index = spr_collision;
+	//door_right.depth = 410;
+	//door_right.visible = true;
 }
 
 if open{
@@ -40,9 +42,4 @@ if open{
 			x -= 1;
 		}
 	}
-}
-
-
-if keyboard_check_released(ord("E")){
-	open = !open;
 }
