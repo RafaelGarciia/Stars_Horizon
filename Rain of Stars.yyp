@@ -72,6 +72,7 @@
     {"id":{"name":"station_skylab","path":"rooms/station_skylab/station_skylab.yy",},},
     {"id":{"name":"Portal","path":"sprites/Portal/Portal.yy",},},
     {"id":{"name":"Character_SlashUpRight","path":"sprites/Character_SlashUpRight/Character_SlashUpRight.yy",},},
+    {"id":{"name":"spr_elev","path":"sprites/spr_elev/spr_elev.yy",},},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"Functions","path":"scripts/Functions/Functions.yy",},},
     {"id":{"name":"obj_button_load_game","path":"objects/obj_button_load_game/obj_button_load_game.yy",},},

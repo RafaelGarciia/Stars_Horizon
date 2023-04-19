@@ -1,2 +1,2 @@
-depth = 301;
+//depth = 301;
 draw_self();

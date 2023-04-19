@@ -31,8 +31,8 @@
   "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_elevetor_frame",
-    "path": "sprites/spr_elevetor_frame/spr_elevetor_frame.yy",
+    "name": "spr_elev",
+    "path": "sprites/spr_elev/spr_elev.yy",
   },
   "spriteMaskId": null,
   "visible": false,

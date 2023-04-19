@@ -1,5 +1,5 @@
 if door_left == false{
-	door_left  = instance_create_layer(x-32, y, "Objects", obj_elevator_door);
+	door_left  = instance_create_layer(x-32, y, "Doors", obj_elevator_door);
 	//door_left.sprite_index = spr_elevator_door;
 	door_left.image_index = 0;
 	//door_left.mask_index = spr_collision;
@@ -7,7 +7,7 @@ if door_left == false{
 	//door_left.visible = true;
 }
 if door_right == false{
-	door_right = instance_create_layer(x, y, "Objects", obj_elevator_door);
+	door_right = instance_create_layer(x, y, "Doors", obj_elevator_door);
 	//door_right.sprite_index = spr_elevator_door;
 	door_right.image_index = 1;
 	//door_right.mask_index = spr_collision;
