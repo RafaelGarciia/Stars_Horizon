@@ -1,9 +1,7 @@
 hovering = false;
-clicked  = false;
-text = "PLAY";
 
-_text_x = x;
-_text_y = y;
+text_x = x;
+text_y = y;
 
-_xscale = image_xscale;
-_yscale = image_yscale;
+scale_x = image_xscale;
+scale_y = image_yscale;

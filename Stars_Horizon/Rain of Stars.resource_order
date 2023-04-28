@@ -14,6 +14,7 @@
     {"name":"Sprites","order":1,"path":"folders/_OLD/Ships/HUD/Sprites.yy",},
     {"name":"Controls","order":3,"path":"folders/Controls.yy",},
     {"name":"Sprites","order":3,"path":"folders/Controls/Sprites.yy",},
+    {"name":"Main Menu","order":13,"path":"folders/Main Menu.yy",},
     {"name":"Menus","order":12,"path":"folders/Menus.yy",},
     {"name":"In Game Menu","order":2,"path":"folders/Menus/In Game Menu.yy",},
     {"name":"Buttons","order":1,"path":"folders/Menus/Main Menu/Buttons.yy",},
@@ -36,7 +37,6 @@
     {"name":"Shield","order":1,"path":"folders/Ships/Shield.yy",},
     {"name":"Sprites","order":4,"path":"folders/Ships/Sprites.yy",},
     {"name":"Orphelia","order":1,"path":"folders/Ships/Sprites/Orphelia.yy",},
-    {"name":"Main Menu","order":13,"path":"folders/Main Menu.yy",},
   ],
   "ResourceOrderSettings": [
     {"name":"obj_button_options","order":6,"path":"objects/obj_button_options/obj_button_options.yy",},
