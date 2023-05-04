@@ -3,7 +3,7 @@ var _inst_num = 0;
 
 
 _inst_num += instance_number(obj_dock_bay);
-_inst_num += instance_number(obj_door);
+//_inst_num += instance_number(obj_door);
 _inst_num += instance_number(obj_elevator_door);
 _inst_num += instance_number(obj_elevator_frame);
 _inst_num += instance_number(obj_npc);
@@ -22,13 +22,13 @@ if instance_exists(obj_dock_bay){
 		yy++;
 	}
 }
-if instance_exists(obj_door){
-	with(obj_door){
-		_grid[# 0, yy] = id;
-		_grid[# 1, yy] = y;
-		yy++;
-	}
-}
+//if instance_exists(obj_door){
+//	with(obj_door){
+//		_grid[# 0, yy] = id;
+//		_grid[# 1, yy] = y;
+//		yy++;
+//	}
+//}
 if instance_exists(obj_elevator_door){
 	with(obj_elevator_door){
 		_grid[# 0, yy] = id;

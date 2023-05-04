@@ -1,34 +1,35 @@
-#macro RESO_W 960
-#macro RESO_H 540
-#macro RESO_SCALE 1
+//#macro RESO_W 960
+//#macro RESO_H 540
+//#macro RESO_SCALE 1
 
-#macro CAM_SPEED 0.1
+//#macro CAM_SPEED 0.1
 
-view_enabled	= true;
-view_visible[0] = true;
+//view_enabled	= true;
+//view_visible[0] = true;
 
-camera = camera_create_view(0, 0, RESO_W, RESO_H);
+//camera = camera_create_view(0, 0, RESO_W, RESO_H);
 
-view_set_camera(0, camera);
+//view_set_camera(0, camera);
 
-window_set_size(RESO_W * RESO_SCALE,  RESO_H * RESO_SCALE);
-surface_resize (application_surface, RESO_W * RESO_SCALE, RESO_H * RESO_SCALE);
+//window_set_size(RESO_W * RESO_SCALE, RESO_H * RESO_SCALE);
+//surface_resize (application_surface, RESO_W * RESO_SCALE, RESO_H * RESO_SCALE);
 
-display_set_gui_size(RESO_W, RESO_H);
+//display_set_gui_size(RESO_W, RESO_H);
 
-var display_width  = display_get_width();
-var display_height = display_get_height();
+//var display_width  = display_get_width();
+//var display_height = display_get_height();
 
-var window_width  = RESO_W * RESO_SCALE;
-var window_height = RESO_H * RESO_SCALE;
+//var window_width  = RESO_W * RESO_SCALE;
+//var window_height = RESO_H * RESO_SCALE;
 
-window_set_position(display_width/2 - window_width/2, display_height/2 - window_height/2);
+//window_set_position(display_width/2 - window_width/2, display_height/2 - window_height/2);
 
-mouse_x_previous = device_mouse_x_to_gui(0);
-mouse_y_previous = device_mouse_y_to_gui(0);
+//mouse_x_previous = device_mouse_x_to_gui(0);
+//mouse_y_previous = device_mouse_y_to_gui(0);
 
 
 
+//game_end()
 
 
 
