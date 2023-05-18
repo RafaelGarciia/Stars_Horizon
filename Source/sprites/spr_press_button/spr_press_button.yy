@@ -52,7 +52,7 @@
   "origin": 9,
   "parent": {
     "name": "Main Menu",
-    "path": "folders/Main Menu.yy",
+    "path": "folders/Menus/Main Menu.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

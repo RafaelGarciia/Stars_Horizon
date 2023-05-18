@@ -13,8 +13,8 @@
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Controls","folderPath":"folders/Controls.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Sprites","folderPath":"folders/Controls/Sprites.yy",},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Menus","folderPath":"folders/Menus.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Main Menu","folderPath":"folders/Menus/Main Menu.yy",},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Menus","folderPath":"folders/Menus.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"NPCs","folderPath":"folders/NPCs.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Atendente","folderPath":"folders/NPCs/Atendente.yy",},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Player","folderPath":"folders/Player.yy",},
@@ -52,7 +52,6 @@
     {"id":{"name":"rm_main_menu","path":"rooms/rm_main_menu/rm_main_menu.yy",},},
     {"id":{"name":"Character_SlashUpRight","path":"sprites/Character_SlashUpRight/Character_SlashUpRight.yy",},},
     {"id":{"name":"spr_elev","path":"sprites/spr_elev/spr_elev.yy",},},
-    {"id":{"name":"stat","path":"rooms/stat/stat.yy",},},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"Functions","path":"scripts/Functions/Functions.yy",},},
     {"id":{"name":"spr_player_walk_downright","path":"sprites/spr_player_walk_downright/spr_player_walk_downright.yy",},},
@@ -107,7 +106,6 @@
     {"roomId":{"name":"rm_main_menu","path":"rooms/rm_main_menu/rm_main_menu.yy",},},
     {"roomId":{"name":"rm_menu","path":"rooms/rm_menu/rm_menu.yy",},},
     {"roomId":{"name":"station_skylab","path":"rooms/station_skylab/station_skylab.yy",},},
-    {"roomId":{"name":"stat","path":"rooms/stat/stat.yy",},},
   ],
   "TextureGroups": [
     {"resourceType":"GMTextureGroup","resourceVersion":"1.3","name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"targets":-1,},

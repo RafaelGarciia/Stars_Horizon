@@ -9,7 +9,7 @@ if hovering {
 	} else if mouse_check_button_released(mb_left) {
 		image_index = 0;
 		event_user(0);
-		alarm[0] = 10;
+		//alarm[0] = 10;
 	}
 } else {
 	image_xscale = scale_x;

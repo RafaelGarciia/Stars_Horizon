@@ -1,14 +1,15 @@
+window_set_size(view_port_width, view_port_height);
+surface_resize(application_surface, view_port_width, view_port_height);
+display_set_gui_size(hud_width, hud_height);
 
-//var _follow = obj_control.in_control
-//	_obj_name = object_get_name(_follow.object_index);
-//	_spd_cam = 0;
-	
-//if _obj_name == "obj_ship"{
-//	_spd_cam = 0.1;	
-//}else if _obj_name == "obj_player"{
-//	_spd_cam = 0.05;
-//}
 
-//x = clamp(lerp(x, _follow.x, _spd_cam), 0, room_width );
-//y = clamp(lerp(y, _follow.y, _spd_cam), 0, room_height);
-	
+if keyboard_check(vk_up){
+	view_port_width  = 1600
+	view_port_height = 900
+	window_center();
+}
+if keyboard_check(vk_down){
+	view_port_width  = 960;
+	view_port_height = 540;
+	window_center();
+}
