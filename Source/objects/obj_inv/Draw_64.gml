@@ -14,7 +14,7 @@ if open{
 	var _slot_row = 0;
 	var _slot_collumn = 0;
 	
-	for (var _indx = 0; _indx < total_slots; _indx++){
+	for (var indx = 0; indx < total_slots; indx++){
 		var _slot_x = _inventory_x + 1 + ((slots_size + pixel_margin) * _slot_collumn),
 		    _slot_y = _inventory_y + 1 + ((slots_size + pixel_margin) * _slot_row);
 
@@ -25,23 +25,23 @@ if open{
 
 			if mouse_check_button_pressed(mb_left){
 				if selected_item == undefined{
-					selected_item = variable_clone(inventory_list[| _indx]);
-					selected_position = _indx;
+					selected_item = variable_clone(inventory_list[| indx]);
+					selected_position = indx;
 					if is_struct(selected_item){
-						inventory_list[| _indx] = undefined;
+						inventory_list[| indx] = undefined;
 					}
 				}
-				else if inventory_list[| _indx] == undefined{
-					inventory_list[| _indx] = variable_clone(selected_item);
+				else if inventory_list[| indx] == undefined{
+					inventory_list[| indx] = variable_clone(selected_item);
 					clear_select();
 				}
-				else if inventory_list[| _indx].item_id == selected_item.item_id{
-					inventory_list[| _indx].quantity += selected_item.quantity;
+				else if inventory_list[| indx].item_id == selected_item.item_id{
+					inventory_list[| indx].quantity += selected_item.quantity;
 					clear_select();
 				}
 				else{
-					var _pass = variable_clone(inventory_list[| _indx]);
-					inventory_list[| _indx] = variable_clone(selected_item);
+					var _pass = variable_clone(inventory_list[| indx]);
+					inventory_list[| indx] = variable_clone(selected_item);
 					selected_item = _pass;
 				}
 			}
@@ -49,33 +49,33 @@ if open{
 
 			if mouse_check_button_pressed(mb_right){
 				if selected_item == undefined{
-					selected_item = variable_clone(inventory_list[| _indx]);
-					selected_position = _indx;
+					selected_item = variable_clone(inventory_list[| indx]);
+					selected_position = indx;
 					if is_struct(selected_item){
 						
-						var _quantity = floor(inventory_list[| _indx].quantity/2);
-						if inventory_list[| _indx].quantity % 2 == 0{
+						var _quantity = floor(inventory_list[| indx].quantity/2);
+						if inventory_list[| indx].quantity % 2 == 0{
 							selected_item.quantity = _quantity;
-							inventory_list[| _indx].quantity = _quantity;
+							inventory_list[| indx].quantity = _quantity;
 						}
-						else if inventory_list[| _indx].quantity > 1{
+						else if inventory_list[| indx].quantity > 1{
 							selected_item.quantity = _quantity;
-							inventory_list[| _indx].quantity = _quantity + 1;
+							inventory_list[| indx].quantity = _quantity + 1;
 						}
 						else{
-							selected_item.quantity = inventory_list[| _indx].quantity;
-							inventory_list[| _indx] = undefined;
+							selected_item.quantity = inventory_list[| indx].quantity;
+							inventory_list[| indx] = undefined;
 						}
 					}
 				}
 				else{
-					if inventory_list[| _indx] == undefined{
+					if inventory_list[| indx] == undefined{
 						
-						inventory_list[| _indx] = variable_clone(selected_item);
-						inventory_list[| _indx].quantity = 0;
+						inventory_list[| indx] = variable_clone(selected_item);
+						inventory_list[| indx].quantity = 0;
 					}
-					if inventory_list[| _indx].item_id == selected_item.item_id{
-						inventory_list[| _indx].quantity += 1;
+					if inventory_list[| indx].item_id == selected_item.item_id{
+						inventory_list[| indx].quantity += 1;
 						selected_item.quantity -= 1;
 						if selected_item.quantity == 0{ clear_select() };
 					}
@@ -86,20 +86,20 @@ if open{
 
 
 
-		if inventory_list[| _indx] != undefined{
-			draw_sprite_ext(inventory_list[| _indx].sprite.image, inventory_list[| _indx].sprite.index, _slot_x, _slot_y, scale, scale, 0, c_white, 1);
+		if inventory_list[| indx] != undefined{
+			draw_sprite_ext(inventory_list[| indx].sprite.image, inventory_list[| indx].sprite.index, _slot_x, _slot_y, scale, scale, 0, c_white, 1);
 		
 			draw_set_font(fnt_inventory);
 			draw_set_halign(fa_right);
 			
-			draw_text(_slot_x + slots_size, _slot_y + slots_size-15, inventory_list[| _indx].quantity);
+			draw_text(_slot_x + slots_size, _slot_y + slots_size-15, inventory_list[| indx].quantity);
 			
 			draw_set_font(-1);
 			draw_set_halign(-1);
 		}
 		
-		if inventory_list[| _indx] != undefined and inventory_list[| _indx].quantity == 0{
-			inventory_list[| _indx] = undefined;
+		if inventory_list[| indx] != undefined and inventory_list[| indx].quantity == 0{
+			inventory_list[| indx] = undefined;
 		}
 		
 		_slot_collumn++;
@@ -130,11 +130,11 @@ if open{
 if de_bug{
 	var _size = ds_list_size(inventory_list);
 	draw_set_font(fnt_inventory);
-	for (var _i = 0; _i < _size; _i++){
-		var _item = inventory_list[| _i];
+	for (var i = 0; i < _size; i++){
+		var _item = inventory_list[| i];
 	
 		var _x = 10;
-		var _y = 10 + 20 * _i;
+		var _y = 10 + 20 *i;
 	
 		draw_text(_x, _y, string(_item));
 	}
