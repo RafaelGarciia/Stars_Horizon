@@ -1,0 +1,5 @@
+/// @func			- Nome completo da função e seus argumentos [@func my_func(args)]
+/// @desc			- Uma descrição geral da função [@desc é uma função de teste geral]
+/// @param; @arg	- Informações sobre argumentos, com um opcional {type} [@param {Id.Instance} name_var variavel que guarda a instancia]
+/// @return			- tipo de dado que a função retorna [@return {string} Retorna uma string]
+
