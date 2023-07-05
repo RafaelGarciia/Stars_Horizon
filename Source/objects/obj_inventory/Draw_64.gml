@@ -122,6 +122,12 @@ if open{
 	}
 	
 }
+else{
+	if selected_item != undefined{
+		inventory_list[| selected_position] = selected_item;
+		clear_select();
+	}
+}
 
 
 

@@ -19,10 +19,14 @@ clear_select = function (){
 
 open = false;
 
+
+slots_size = 32;
+
 scale = 2;
 slots_size = 16 * scale;
-qt_slots_column = sprite_get_width(spr_inventory_hud)%slots_size;
-qt_slots_row = sprite_get_height(spr_inventory_hud)%slots_size;
+qt_slots_column = sprite_get_width(spr_inventory_hud)%(slots_size/scale)-1;
+qt_slots_row = sprite_get_height(spr_inventory_hud)%(slots_size/scale)-1;
+
 total_slots = qt_slots_column * qt_slots_row;
 pixel_margin = 1 * scale;
 
