@@ -1,5 +1,5 @@
-win_height = 768/2;
-win_width = 1366/2;
+win_height = 768;
+win_width = 1366;
 
 
 display_set_gui_size(win_width, win_height);

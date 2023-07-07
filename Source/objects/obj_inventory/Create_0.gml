@@ -1,48 +1,62 @@
-function add_item(index_list, item){
-	/// @func add_item(index_list, item)
-	/// @desc Adiciona um item a lista de inventario.
-	/// @arg {DS LIST ID} index_list Index da lista a ser adicionado.
-	/// @arg {Struct} item Struct com o item a ser adicionado.
-	
-	for (var i = 0; i<ds_list_size(index_list); i++){
-		if index_list[| i] == undefined{
-			index_list[| i] = item;
+/// @desc
+
+#region Functions
+/// @func add_item(list, item)
+/// @desc This function adds an item to the last slot of the inventory list.
+/// @arg {Id.DsList}	_index_list	List to add the item.
+/// @arg {Struct}		_item		Item (Struct) to add to list.
+/// @return {any}
+function add_item(_index_list, _item){
+	for (var _i = 0; _i<ds_list_size(_index_list); _i++){
+		if _index_list[| _i] == undefined{
+			_index_list[| _i] = _item;
 			break;
 		}
 	}
 }
 
+/// @func clear_select()
+/// @desc This local function clears the selected item.
+/// @return {any}
 clear_select = function (){
 	selected_item = undefined;
 	selected_position = undefined;
 }
+#endregion
 
+#region Parameters
+//v Variable that defines if the inventory is open or not.
 open = false;
-
-
-slots_size = 32;
-
-scale = 2;
-slots_size = 16 * scale;
-qt_slots_column = sprite_get_width(spr_inventory_hud)%(slots_size/scale)-1;
-qt_slots_row = sprite_get_height(spr_inventory_hud)%(slots_size/scale)-1;
-
-total_slots = qt_slots_column * qt_slots_row;
-pixel_margin = 1 * scale;
-
-// Criar a lista do inventario
-inventory_list = ds_list_create();
-for (var i = 0; i < total_slots; i++){
-	ds_list_add(inventory_list, undefined);
-}
-
-//Declara as varaveis de seleção
-selected_item = undefined;
-selected_position = undefined;
-
-//Variavel de debug
+//v variable for debug
 de_bug = false;
 
+//v Sets the scale of the inventory.
+scale = 2;
+//v Size of each slot.
+slots_size = sprite_get_width(spr_inventory_seletor);
+//v Margin in pixels.
+pixel_margin = 1 * scale;
+
+//v Amount of columns.
+qt_slots_column = sprite_get_width(spr_inventory_hud)%(slots_size)-1;
+//v Amount of rows.
+qt_slots_row = sprite_get_height(spr_inventory_hud)%(slots_size)-1;
+//v Amount of slots.
+total_slots = qt_slots_column * qt_slots_row;
+
+//v variables that hold the item selected by the mouse.
+selected_item = undefined;
+selected_position = undefined;
+#endregion
+
+#region List creation
+//v Create inventory list.
+inventory_list = ds_list_create();
+//v sets the size of the list.
+for (var _i = 0; _i < total_slots; _i++){
+	ds_list_add(inventory_list, undefined);
+}
+#endregion
 
 
 // Adicionando items para teste
