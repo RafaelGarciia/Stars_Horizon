@@ -8,10 +8,8 @@
 /// @return {any}
 function add_item(_index_list, _item){
 	for (var _i = 0; _i<ds_list_size(_index_list); _i++){
-		if _index_list[| _i] == undefined{
-			_index_list[| _i] = _item;
-			break;
-		}
+		if _index_list[| _i] == undefined{ _index_list[| _i] = _item; break; }
+		else if _index_list[| _i].item_id == _item.item_id { _index_list[| _i].quantity += _item.quantity; break; };
 	}
 }
 
@@ -60,6 +58,9 @@ for (var _i = 0; _i < total_slots; _i++){
 
 
 // Adicionando items para teste
-add_item(inventory_list, new Sword());
-add_item(inventory_list, new Sword());
-add_item(inventory_list, new Bow());
+repeat 5{
+	add_item(inventory_list, new Sword());
+}
+repeat 10{
+	add_item(inventory_list, new Bow());
+}

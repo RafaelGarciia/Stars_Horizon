@@ -8,7 +8,7 @@ function Item () constructor{
 	sprite = {image : 0, index : 0};
 	item_id = 0;
 	name = 0;
-	quantity = 5;
+	quantity = 1;
 }
 
 
