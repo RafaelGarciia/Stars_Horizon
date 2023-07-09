@@ -1,6 +1,6 @@
-var _spd		= 0,
-	  _spd_hor = 0,
-	  _spd_ver	= 0;
+var _spd= 0,
+	_spd_hor = 0,
+	_spd_ver	= 0;
 
 #region Entrada de Comandos
 _spd_hor = key_move_right - key_move_left;

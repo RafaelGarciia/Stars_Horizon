@@ -286,7 +286,7 @@
   "maintainGms1Font": false,
   "parent": {
     "name": "Inventory",
-    "path": "folders/Inventory.yy",
+    "path": "folders/Player/Inventory.yy",
   },
   "pointRounding": 0,
   "ranges": [

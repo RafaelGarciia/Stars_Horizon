@@ -26,7 +26,7 @@
   "origin": 0,
   "parent": {
     "name": "Inventory",
-    "path": "folders/Inventory.yy",
+    "path": "folders/Player/Inventory.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
